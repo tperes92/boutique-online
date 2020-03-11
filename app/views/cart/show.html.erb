@@ -69,6 +69,11 @@
             	</nav>
             </div>
         </header>
+           <% flash.each do |type, msg| %>
+                    <div class='alert alert-info'>
+                      <%= msg %>
+                    </div>
+                  <% end %>
         <!--================Header Menu Area =================-->
         
         <!--================Home Banner Area =================-->
@@ -88,6 +93,47 @@
         <!--================End Home Banner Area =================-->
         
         <!--================Cart Area =================-->
+
+<section class="feature_product_area latest_product_area">
+          <div class="main_box">
+        <div class="container">
+          <div class="feature_product_inner">
+            <div class="main_title">
+              <h2>Visit our Cat-Alog !</h2>
+              <p>Who are in extremely love with eco friendly system.</p>
+            </div>
+
+            
+            <div class="latest_product_inner row">
+              <% @cart_items.each do |cart_item| %>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="f_p_item">
+                  <div class="f_p_img">
+                
+                    <%= image_tag cart_item.item.image,  class: "img img-fluid"%>  
+                    <div class="p_icon">
+                      <a href="#"><i class="lnr lnr-heart"></i></a>
+                    </div>
+                  </div>
+                  <h4> <%= link_to cart_item.item.title , cart_item_path(cart_item.item.id) %></h4>
+                  <h5><%= cart_item.item.price %> $</h5>
+                </div>
+              </div>
+            <%end%>
+              
+            </div>
+          </div>
+        </div>
+          </div>
+        </section>
+
+
+
+
+
+
+
+
         <section class="cart_area">
         	<div class="container">
         		<div class="cart_inner">

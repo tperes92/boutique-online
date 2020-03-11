@@ -1,6 +1,5 @@
 class CartItemsController < ApplicationController
-  include CurrentCart
-    before_action :set_cart, only: [:create]
+
 
   def index 
     @cart_items = CartItem.all
@@ -11,15 +10,19 @@ class CartItemsController < ApplicationController
   end
 
   def create 
+    @cart = Cart.find_by(user: current_user)
     @item = Item.find_by(id: params[:item_id])
-    @cart_item = CartItem.new(item: @item)
+    @cart_item = CartItem.new(cart: @cart, item: @item)
       if @cart_item.save 
+
       redirect_to root_path
+      flash[:alert] = "L'article a bien été ajouté au panier"
       else
-      redirect_to cart_items_path
+
+      flash[:error] = 'Le produit n\'a pas été ajouté à votre panier'
+      redirect_to items_path
       end
   end
-
 
 
 end
