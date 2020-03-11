@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
 
+
 	 layout :set_layout
  def set_layout
     if current_user
@@ -8,4 +9,5 @@ class ApplicationController < ActionController::Base
       'application'
     end
  end
+
 end
