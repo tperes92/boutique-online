@@ -34,10 +34,10 @@
                 
                 
                 <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connected</a>
                   <ul class="dropdown-menu">
-                    <li class="nav-item"><a <%= link_to "Login", new_user_session_path,  :class => "nav-link"  %></a>  
-                    <li class="nav-item"><a <%= link_to "Sign Up", new_user_registration_path,  :class => "nav-link"  %></a>  
+                    <li class="nav-item"><a <%= link_to "My Profil",   :class => "nav-link"  %>></a>  
+                    <li class="nav-item"><a <%= link_to "Log Out", destroy_user_session_path, :class => "nav-link", method: :delete  %>></a>  
                   </ul>
                 </li> 
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
