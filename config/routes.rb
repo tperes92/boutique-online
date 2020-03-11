@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
    root 'items#index' 
    get '/cart', to: 'cart#show' 
 
