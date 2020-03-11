@@ -50,6 +50,12 @@ Table of Content:
   padding: 0px;
 }
 
+.logosize {
+  height: 15%;
+  width: 15%;
+
+}
+
 a {
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
