@@ -5,8 +5,7 @@
 <body>
         
         
-        
-        <!--================Home Banner Area =================-->
+    <!--================Home Banner Area =================-->
         <section class="home_banner_area">
 
         	    <% flash.each do |type, msg| %>
@@ -15,61 +14,65 @@
       			</div>
     <% end %>
             <div class="banner_inner d-flex align-items-center">
-				<div class="container">
-					<div class="banner_content row">
-						<div class="col-lg-5">
-							<h3>CAT EYE <br />Collections!</h3>
-							<p>Find the best cat picture, here comes the wildest,, you have ever seen, such amazing experience ! </p>
-							<a class="white_bg_btn" href="#catalog">View Collection</a>
-						</div>
-						<div class="col-lg-7">
-							<div class="halemet_img">
-								<img src="assets/jumbocat.png" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
+        <div class="container">
+            <% flash.each do |type, msg| %>
+                    <div class='alert alert-info'>
+                      <%= msg %>
+                    </div>
+                  <% end %>
+          <div class="banner_content row">
+            <div class="col-lg-5">
+              <h3>CAT EYE <br />Collections!</h3>
+              <p>Find the best cat picture, here comes the wildest,, you have ever seen, such amazing experience ! </p>
+              <a class="white_bg_btn" href="#">View Collection</a>
+            </div>
+            <div class="col-lg-7">
+              <div class="halemet_img">
+                <img src="assets/jumbocat.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
             </div>
         </section>
         <!--================End Home Banner Area =================-->
         
-        
-
+   
         
         <!--================Latest Product Area =================-->
         <section class="feature_product_area latest_product_area">
-        	<div class="main_box">
-				<div class="container">
-					<div class="feature_product_inner">
-						<div class="main_title">
-							<h2 id="catalog">Visit our Cat-Alog !</h2>
-							<p>Who are in extremely love with eco friendly system.</p>
-						</div>
+          <div class="main_box">
+        <div class="container">
+          <div class="feature_product_inner">
+            <div class="main_title">
+              <h2>Visit our Cat-Alog !</h2>
+              <p>Who are in extremely love with eco friendly system.</p>
+            </div>
 
-						
-						<div class="latest_product_inner row">
-							<% @items.each do |item| %>
-							<div class="col-lg-3 col-md-4 col-sm-6">
-								<div class="f_p_item">
-									<div class="f_p_img">
-										<%= image_tag item.image,  class: "img img-fluid"%>  
-										<div class="p_icon">
-											<a href="#"><i class="lnr lnr-heart"></i></a>
+            
+            <div class="latest_product_inner row">
+              <% @items.each do |item| %>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="f_p_item">
+                  <div class="f_p_img">
+                    <%= image_tag item.image,  class: "img img-fluid"%>  
+                    <div class="p_icon">
+                      <a href="#"><i class="lnr lnr-heart"></i></a>
                       <%= link_to "", cart_items_path(item_id: item.id), method: :post, :class=> 'lnr lnr-cart' %>
-										</div>
-									</div>
-									<a href="#"><h4> <%= item.title %></h4></a>
-									<h5><%= item.price %> $</h5>
-								</div>
-							</div>
-						<%end%>
-  						
-						</div>
-					</div>
-				</div>
-        	</div>
+                    </div>
+                  </div>
+                  <h4> <%= link_to item.title , item_path(item.id) %></h4>
+                  <h5><%= item.price %> $</h5>
+                </div>
+              </div>
+            <%end%>
+              
+            </div>
+          </div>
+        </div>
+          </div>
         </section>
-        <!--================End Latest Product Area =================-->
+        <!--================End Latest Product Area =================-->       
 
                 <!--================Deal Timer Area =================-->
         <section class="timer_area">
