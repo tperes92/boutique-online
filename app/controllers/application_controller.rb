@@ -10,8 +10,4 @@ class ApplicationController < ActionController::Base
     end
  end
 
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> 2d702f8615040df50968f48526a3a4659395894f
