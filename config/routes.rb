@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
-  
-  get '/cart', to: 'cart#show'
+  root 'items#index'  
+ devise_for :users
+ resources :items
+ get '/cart', to: 'cart#show'
 
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+ # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
