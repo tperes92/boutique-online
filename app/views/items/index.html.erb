@@ -8,6 +8,12 @@
         
         <!--================Home Banner Area =================-->
         <section class="home_banner_area">
+
+        	    <% flash.each do |type, msg| %>
+      			<div>
+        		<%= msg %>
+      			</div>
+    <% end %>
             <div class="banner_inner d-flex align-items-center">
 				<div class="container">
 					<div class="banner_content row">
