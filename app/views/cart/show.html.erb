@@ -83,7 +83,7 @@
 												<% @cart_items.each do |cart_item| %>
 												<div class="col-lg-3 col-md-4 col-sm-6">
 													<div class="f_p_item">
-													<div class="f_p_img">
+									       			<div class="f_p_img">
 													
 														<%= image_tag cart_item.item.image,  class: "img img-fluid"%>  
 														<div class="p_icon">
@@ -150,27 +150,7 @@
 									<td>
 										<div class="checkout_btn_inner">
 											<a class="gray_btn" href="#">Continue Shopping</a>
-										</div>
-										<div>
-											<%= form_tag orders_path do %>
-											  <article>
-											    <% if flash[:error].present? %>
-											      <div id="error_explanation">
-											        <p><%= flash[:error] %></p>
-											      </div>
-											    <% end %>
-											    <label class="amount">
-											      <span>Amount: $5.00</span>
-											    </label>
-											  </article>
-
-											  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-											          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-											          data-description="Cat Eye pictures"
-											          data-amount="500"
-											          data-currency="eur"
-											          data-locale="auto"></script>
-											<% end %>
+											<%= link_to "Passer la commande", new_order_path, class: 'main_btn' %>
 										</div>
 									</td>
 								</tr>

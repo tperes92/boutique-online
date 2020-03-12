@@ -49,7 +49,7 @@
         					<h3><%= @item.title%></h3>
         					<h2><%= @item.price%></h2>
         					<p><%= @item.description %></p>
-        					<div class="card_area">
+        			     	<div class="card_area">
         						<%= link_to "Add to Cart", cart_items_path(item_id: @item.id), method: :post, :class=> 'btn btn-outline-danger' %>
         					</div>
         				</div>
