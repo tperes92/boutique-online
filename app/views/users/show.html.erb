@@ -2,7 +2,7 @@
   <div class="banner_inner d-flex align-items-center">
     <div class="container">
       <div class="banner_content text-center">
-      <h2>Bienvenue sur ton Profil !</h2>
+      <h2>Welcome to you Profil Page !</h2>
         <div class="page_link">
         <p> Tu pourras ici, retrouver ton panier et modifier tes informations personnelles, géniale ! </p>
         </div>
@@ -18,8 +18,10 @@
 					<h1>Your Personal Informations</h1>
 					<hr>
 					<h4> Adresse mail: <%= @user.email %> <h4>
-					<h4> Nom : nom <h4>
-					<h4> Prénom : nom <h4>
+					<h4> Nom : <%= @user.last_name %> <h4>
+					<h4> Prénom :  <%= @user.first_name %>  <h4>
+					<br>
+					<%= link_to "Edit Informations",  edit_user_registration_path(current_user), :class => "ibtn submit_btn" %>
 					<br>
 					<br>
 					<h1> Your Cart </h1>
