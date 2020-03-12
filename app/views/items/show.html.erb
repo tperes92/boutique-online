@@ -66,15 +66,15 @@
             <p>All as lovely as the one you are looking right now.</p>
             <div class="row">
               <div class="col-md-4">
-                <% rand_1 = @items.find(rand(1..20)) %>
+                <% rand_1 = @items.find(rand(1..10)) %>
                 <%= link_to image_tag(rand_1.image, class: "single-gallery-image", width: 250), item_path(rand_1.id) %>
               </div>
               <div class="col-md-4">
-                <% rand_2 = @items.find(rand(1..20)) %>
+                <% rand_2 = @items.find(rand(1..10)) %>
                 <%= link_to image_tag(rand_2.image, class: "single-gallery-image", width: 250), item_path(rand_2.id) %>
               </div>
               <div class="col-md-4">
-                <% rand_3 = @items.find(rand(1..20)) %>
+                <% rand_3 = @items.find(rand(1..10)) %>
                 <%= link_to image_tag(rand_3.image, class: "single-gallery-image", width: 250), item_path(rand_3.id) %>
               </div>
             </div>
