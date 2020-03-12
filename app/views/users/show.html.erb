@@ -26,6 +26,24 @@
 					<br>
 					<h1> Your Cart </h1>
 					<hr>
+					<div class="latest_product_inner row">
+              <% @cart_items.each do |cart_item| %>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="f_p_item">
+                  <div class="f_p_img">
+                
+                    <%= image_tag cart_item.item.image,  class: "img img-fluid"%>  
+                    <div class="p_icon">
+                      <a href="#"><i class="lnr lnr-heart"></i></a>
+                    </div>
+                  </div>
+                  <h4> <%= link_to cart_item.item.title , item_path(cart_item.item.id) %></h4>
+                  <h5><%= cart_item.item.price %> $</h5>
+                </div>
+              </div>
+            <%end%>
+              
+            </div>
 							
 			</div>
 		</div>
