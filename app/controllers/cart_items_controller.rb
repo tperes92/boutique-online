@@ -26,4 +26,18 @@ before_action :authenticate_user!
   end
 
 
+  def destroy
+    @cart = Cart.find_by(user: current_user)
+    @item = Item.find_by(id: params[:id])
+    @cart_item = CartItem.find_by(cart: @cart, item: @item)
+    if @cart_item.destroy
+      redirect_to cart_path(@cart.id)
+      flash[:alert] = "L'article a été supprimé du panier"
+    else
+      flash[:alert] = "L'article n'a pas été supprimé du panier"
+    end
+  end
+
+
 end
+
