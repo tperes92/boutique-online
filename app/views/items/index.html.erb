@@ -48,15 +48,16 @@
             <div class="main_title">
               <h2>Visit our Cat-Alog !</h2>
               <p>Who are in extremely love with eco friendly system.</p>
+              <%= image_tag(Item.find(2).image) %>
             </div>
 
             
             <div class="latest_product_inner row">
-              <% @items.each do |item| %>
+              <%= @items.each do |item| %>
               <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="f_p_item">
                   <div class="f_p_img">
-                    <%= image_tag item.image,  class: "img img-fluid"%>  
+                    <%= image_tag(item.image,  class: "img img-fluid")%>  
                     <div class="p_icon">
                       <a href="#"><i class="lnr lnr-heart"></i></a>
                       <%= link_to "", cart_items_path(item_id: item.id), method: :post, :class=> 'lnr lnr-cart' %>
