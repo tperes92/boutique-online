@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <%= @user.first_name %> ta commande est en cours d'acheminement !
+      <p>
+        Ta commande contient :
+        <% @items.each do |i| %>
+        - <%= i.get_item.title %>
+        <% end %>
+      </p>
+
+      <p> À bientôt dans notre boutique !
+      </p>
+  </body>
+</html>
