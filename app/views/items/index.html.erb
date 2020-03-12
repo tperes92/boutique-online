@@ -28,7 +28,8 @@
             </div>
             <div class="col-lg-7">
               <div class="halemet_img">
-                <img src="assets/jumbocat.png" alt="">
+                <%= image_tag("jumbocat.png") %>
+
               </div>
             </div>
           </div>
@@ -47,6 +48,7 @@
             <div class="main_title">
               <h2>Visit our Cat-Alog !</h2>
               <p>Who are in extremely love with eco friendly system.</p>
+              
             </div>
 
             
@@ -55,7 +57,7 @@
               <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="f_p_item">
                   <div class="f_p_img">
-                    <%= image_tag item.image,  class: "img img-fluid"%>  
+                    <%= image_tag(item.image,  class: "img img-fluid")%>  
                     <div class="p_icon">
                       <a href="#"><i class="lnr lnr-heart"></i></a>
                       <%= link_to "", cart_items_path(item_id: item.id), method: :post, :class=> 'lnr lnr-cart' %>
