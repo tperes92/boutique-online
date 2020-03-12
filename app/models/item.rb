@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+	has_one_attached :catpic
 	validates :title, presence: true
 	validates :description, presence: true
 	validates :price, presence: true
