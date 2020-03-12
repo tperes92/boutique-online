@@ -34,18 +34,19 @@
                 
                 
                 <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connected</a>
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
                   <ul class="dropdown-menu">
-                    <li class="nav-item"><a <%= link_to "My Profil", users_show_path(current_user),  :class => "nav-link"  %>></a>  
-                    <li class="nav-item"><a <%= link_to "Log Out", destroy_user_session_path, :class => "nav-link", method: :delete  %>></a>  
+                    <li class="nav-item"><a <%= link_to "My Profil", users_show_path(current_user),  :class => "nav-link"  %></a>  
+                    <li class="nav-item"><a <%= link_to "Log Out", destroy_user_session_path, :class => "nav-link", method: :delete  %></a>  
                   </ul>
                 </li> 
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
               </ul>
-              <div class="nav navbar-nav navbar-right">
-                <%= link_to '' , cart_path(current_user), :class => 'lnr lnr lnr-cart' %> 
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class = " nav-item "> <%= link_to '' , cart_path(current_user), :class => 'lnr lnr lnr-cart cart' %> </li>
+              </ul>
              
-              </div>
             </div> 
           </div>
               </nav>
