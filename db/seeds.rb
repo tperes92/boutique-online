@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Item1 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat.001.jpeg")
+Item1 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat1.jpg")
 Item1.save
 
-Item2 = Item.create(title: 'Bengal', description: 'Un chat', price: rand(5..100), image: "chat1.jpg")
+Item2 = Item.create(title: 'Bengal', description: 'Un chat', price: rand(5..100), image: "chat.002.jpeg")
 Item2.save
 
 Item3 = Item.create(title: 'Main Coon', description: 'Un chat', price: rand(5..100), image: "chat.003.jpeg")
