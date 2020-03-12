@@ -1,0 +1,10 @@
+<%= @user.first_name %> ta commande est en cours d'acheminement !
+==========================================================
+ 
+Ta commande contient :
+<% @items.each do |i| %>
+  - <%= i.get_item.title %>
+  <% end %>
+  
+ 
+À bientôt dans notre boutique !
