@@ -27,6 +27,16 @@
           <%= render "devise/shared/error_messages", resource: resource %>
 
           <div class =" col-md-12 form-group ">
+          <%= f.label :first_name, 'First Name', :class => 'sr-only' %>
+          <%= f.text_field :first_name, autofocus: true, :class => "form-control ", placeholder: 'First Name' %>
+          </div>
+
+          <div class =" col-md-12 form-group ">
+          <%= f.label :last_name, 'Last Name', :class => 'sr-only' %>
+          <%= f.text_field :last_name, autofocus: true, :class => "form-control ", placeholder: 'Last Name' %>
+          </div>
+
+          <div class =" col-md-12 form-group ">
           <%= f.label :email, 'Email Address', :class => 'sr-only' %>
           <%= f.email_field :email, autofocus: true, :class => "form-control ", placeholder: 'Email Address' %>
           </div>
