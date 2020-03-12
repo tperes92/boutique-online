@@ -9,3 +9,31 @@
 Item1 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat1.jpg")
 Item1.save
 
+
+Item12 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat12.jpg")
+Item1.save
+
+
+Item13 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat13.jpg")
+Item1.save
+
+Item14 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat14.jpg")
+Item1.save
+
+Item15 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat15.jpg")
+Item1.save
+
+Item16 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat16.jpg")
+Item1.save
+
+Item17 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat17.jpg")
+Item1.save
+
+Item18 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat18.jpg")
+Item1.save
+
+Item19 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat19.jpg")
+Item1.save
+
+Item20 = Item.create(title: 'Persan', description: 'Un chat', price: rand(5..100), image: "chat20.jpg")
+Item1.save
