@@ -15,7 +15,7 @@ class CartController < ApplicationController
     @cart = Cart.find_by(user: current_user)
     @cart.destroy
     flash[:notice] = "Commande supprimée"
-    redirect_to administration_carts_path
+    redirect_to root_path
   end
 
 
