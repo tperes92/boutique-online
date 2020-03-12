@@ -1,5 +1,5 @@
 class CartController < ApplicationController
-     after_action :authenticate_user!
+     before_action :authenticate_user!
 
   def show
     @cart = Cart.find_by(user: current_user)
