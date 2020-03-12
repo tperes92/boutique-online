@@ -58,7 +58,6 @@
                     <%= image_tag item.image,  class: "img img-fluid"%>  
                     <div class="p_icon">
                       <a href="#"><i class="lnr lnr-heart"></i></a>
-                      <%= link_to "", cart_items_path(item_id: item.id), method: :post, :class=> 'lnr lnr-cart' %>
                     </div>
                   </div>
                   <h4> <%= link_to item.title , item_path(item.id) %></h4>
