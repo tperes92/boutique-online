@@ -5,8 +5,8 @@ class OrdersController < ApplicationController
   def create
     # Amount in cents
     @amount = 0
-    @order = Order.new(user: current_user, cart: current_user.cart)
-    @order.items.each do |item|
+    @order = Order.new(user: current_user)
+    @order.user.cart.items.each do |item|
       @amount += item.price
     end
     @order.amount = @amount
@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
 
       charge = Stripe::Charge.create({
         customer: customer.id,
-        amount: @amount * 100,
+        amount: @amount.to_i * 100,
         description: 'Paiement Cat Eye',
         currency: 'eur',
       })
