@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Item0 = Item.create(title: 'Nugget', description: 'Le plus bg des cats', price: rand(1000..10000), image: "chat11.jpg")
+Item1.save
+
 Item1 = Item.create(title: 'Baby', description: 'Un chat', price: rand(5..100), image: "chat1.jpg")
 Item1.save
 
@@ -37,3 +40,4 @@ Item1.save
 
 Item20 = Item.create(title: 'Thaï', description: 'Un chat', price: rand(5..100), image: "chat20.jpg")
 Item1.save
+
