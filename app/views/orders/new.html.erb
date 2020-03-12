@@ -1,0 +1,31 @@
+<div class="container text-center mt-5 mb-5">
+	<div class="order_box" style="width: 20em">
+		<h2>Votre commande :</h2>
+		<ul class="list">
+      <% total = 0 %>
+      <% current_user.cart.items.each do |item| %>
+        <% total += item.price %>
+		    <li><%= link_to "#{item.title} #{item.price}€", items_path(item.id) %></li>
+      <% end %>
+		</ul><br/>
+    <%= form_tag orders_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <label class="amount">
+          <h5>Total: <%= total %>€</h5>
+        </label>
+      </article>
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="Cat Eye Pictures"
+              data-amount="<%= total * 100 %>"
+              data-currency="eur"
+              data-locale="auto"></script>
+    <% end %>
+	</div>
+</div>
